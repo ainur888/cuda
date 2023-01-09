@@ -1,0 +1,130 @@
+@media only screen and (max-width:1200px) {
+    header {
+        height: 100vh;
+    }
+    .service-section {
+        text-align: center;
+    }
+    
+}
+@media only screen and (max-width:1024px){
+   
+    .row {
+        margin: 0 1.5rem;
+    }
+    .hero-text-box {
+        width: 90%
+    }
+    .client-photo {
+        float: none;
+        width:100%;
+        text-align:center;
+        margin-bottom: 2rem;
+    }
+    .client-review {
+        text-align: center;
+        float: none;
+        width: 100%;
+    
+    }
+    .client-review h3 .role {
+        color:#333;
+
+    }
+    @media only screen and (max-width:991px){
+       
+        .span_1_of_4 {
+            text-align: center;
+            width: 49.2%;
+        }
+        .team-secton-3  .span_1_of_4:nth-child(3) {
+            margin-left: 0;
+        }
+        .skill-section .span_1_of_4:nth-child(3) {
+            margin-left: 0;
+        }
+    }
+    @media only screen and (max-width:768px){
+        .mobile-menu span {
+            display: block;
+        }
+        
+      .main-nav{
+            display: none;
+        }
+        .span_1_of_4 {
+            width: 49.2%;
+            text-align: center;
+        }
+        .span_1_of_4:nth-child(3) {
+            margin-left: 0;
+        }
+        .testimonial-section .little-discription {
+            text-align: center;
+        }
+        .client-review p{
+            width: 90%;
+        }
+
+        h1{
+            font-size: 3rem;
+        }
+        h2{
+            font-size: 2.5rem;
+        }
+        h3{
+            font-size: 2rem;
+        }
+        html {
+            font-size: 57.5%;
+        }
+    }
+    @media only screen and (max-width:480px){
+        header {
+            height: 70vh;
+        }
+        .span_1_of_2 {
+            width: 100%;
+        }
+        .span_1_of_4 {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.2rem;
+        }
+        .contact-section form {
+            width: 100%;
+        }
+        .client-photo {
+            text-align: center;
+        }
+        .client-review {
+            margin-left: 0;
+            
+        }
+        .client-review .role {
+            margin-right: 0;
+        }
+        .client-review p {
+            margin-right: 0;
+            width: 100%;
+        }
+        .testimonial-section .client-review  h3 {
+            margin-right: 0;
+        }
+        .footer-section ul li {
+            margin: 1rem 0;
+        }
+        .service-section .span_1_of_4 {
+            width: 100%;
+        }
+        .team-secton-3 .span_1_of_4 {
+            width: 100%;
+        }
+        .skill-section .span_1_of_4 {
+            width: 100%;
+        }
+    
+    
+    }
+};

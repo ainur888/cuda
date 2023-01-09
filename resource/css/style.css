@@ -1,0 +1,708 @@
+
+                               /* =====================================================
+                               Template Name : Ainur RAhman
+                               Description : A single page portfolio webside. 
+                               Athur : Ainur RAhman
+                               Date : 29.09.2022
+                               Webside : none;
+
+                               ===================================================== */
+                            
+           /* =============================================================================================
+                                        CSS INDEX
+                                        =========
+                            .COMMON CSS
+                            .REUSABLE COMPONENT
+                            1.HEADER SECTION
+                            2.SERVICE SECTION
+                            3.TEAM SECTION
+                            4.SKILL SECTION
+                            5.PORTFOLIO SECTION
+                            6.TESTIMONIAL SECTION
+                            7.CONTACT SECTION
+                            8.FOOTER SECTION
+
+            ============================================================================================= */
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+
+
+
+            
+                                /* ==================================
+                                           COMMON CSS
+                                =================================== */
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 1.6rem;
+   
+}
+ul li {
+    list-style-type: none;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    
+}
+
+
+
+
+
+
+
+
+                                /* ==================================
+                                           REUSABLE COMPONENT
+                                =================================== */
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+    
+}
+h1 {
+    font-size: 3.4rem;
+    color: #fff;
+    text-transform: capitalize;
+
+    
+    
+}
+
+.btn-hero:link,
+.btn-hero:visited,
+.btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5rem 5rem;
+    font-size: 1.6rem;
+    margin-top: 45px;
+    display: inline-block;
+    background:#333;
+    border-bottom: .3rem solid rgba(0, 0, 0, 1);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: .6rem;
+}
+.hero-text-box a:hover {
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    text-decoration: underline;
+}
+
+                   
+section {
+    padding: 8rem 0;
+}
+.clearfix-1::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden; 
+}
+
+h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    margin-top: 0;
+    text-align: center;
+}
+h2::after {
+    content: "";
+    height: .3rem;
+    color: #333;
+    display: block;
+    width: 25rem;
+    background: #fff;
+    margin: auto;
+    margin-top: .5rem; 
+}
+
+h3 {
+    font-size:2.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+h4 {
+    font-size: 1.8rem;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 1rem;
+
+}
+
+
+
+
+
+
+                                
+                                /* ==================================
+                                           HEADER SECTION
+                                =================================== */
+
+header {
+    background: linear-gradient(rgba(100, 58, 121, 0.7),rgba(100, 58, 121, 0.7)), url(./image/2.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 85vh;
+    position: relative;
+}
+.hero-text-box {
+        width: 60%;
+}
+.logo {
+    float: left;
+    height: 3.5rem;
+    width: auto;
+    margin-top: 3.5rem;
+
+}
+.main-nav {
+    float: right;
+    margin-top: 4rem;
+
+}
+.main-nav li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.main-nav li:nth-child(1) {
+    margin-left: 0;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .4rem 1.5rem;
+    border-radius: .8rem;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited {
+    background: #643a79;
+}
+.active  {
+background: #643a79;
+}
+.hero-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+}
+.hero-text-box .btn-hero {
+    background:#E74C3C;
+    box-shadow: 1rem .5rem .5rem #643a79;
+    border-radius: 1rem;
+
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+.mobile-menu span {
+    font-size: 2.5rem;
+    color: #fff;
+    float: right;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    display: none;
+    
+}
+.mobile-menu span:hover {
+    cursor: pointer;
+}
+.overlay {
+    width: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    overflow-x: hidden;
+    z-index: 1;
+}
+.closeebtn {
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 3.5rem;
+}
+.overlay-content {
+    position: relative;
+    top: 18%;
+    width: 100%;
+    text-align: center;
+   
+}
+.overlay-content a {
+    display: block;
+    font-size: 2.5rem;
+    color: #fff;
+    padding: .8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+.overlay-content a:hover {
+    color: white;
+    font-size:2.6rem;
+    text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+                                /* ==================================
+                                           SERVICE SECTION
+                                =================================== */
+.service-section {
+    background: linear-gradient(rgba(23, 194, 163, 0.8),rgba(23, 194, 163, 0.8)), url(./image/3.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.service-section h2::after {
+    width: 28rem;
+    background: #333;
+}
+
+.service-section h2 {
+    color: #333;
+    text-align: center;
+}
+.service-section .span_1_of_4 {
+    text-align: center;
+}
+.col .span_1_of_4 box {
+    text-align: center;
+}
+.service-section .little-discription {
+    font-size: 1.8;
+    color:#333;
+    width: 60%;
+    margin: auto;
+    margin-top: 4rem;
+    text-align: center;
+    
+}
+.box {
+    padding: 2%;
+    width: 100%;
+}
+.service-icon {
+    margin-top: 4rem;
+    margin-bottom: 4.5rem;
+    height: 10rem;
+}  
+.box p {
+    font-weight: 300;
+    font-size: 1.8rem;  
+    color: black; 
+}
+
+
+                                /* ==================================
+                                           TEAM SECTION
+                                =================================== */
+
+.team-secton-3 {
+    background: linear-gradient(rgba(231, 241, 248, 0.7),rgba(231, 241, 248, 0.7)), url(./image/blue-sky.jpg);
+    background-position: center top ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.team-member {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin:4.5rem 0;
+    display: inline-block;  
+}
+.team-secton-3 h2 {
+    color:#333 ;
+    font-weight: 700;
+}
+.team-secton-3 h2::after {
+    background: #333;
+    width: 36rem;
+}
+.team-secton-3 .little-discription {
+    color: #333;
+}
+.team-secton-3 h3 {
+    color: #333;
+}
+.role {
+    font-size: 1.6rem;
+}
+.box {
+    padding: 2rem 0;
+}
+.box p {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+}
+.social-link {
+    margin-top: 3rem;
+}
+.social-link ul  {
+    display: inline-block; 
+}
+.social-link ul li {
+    margin: 0 .5rem;
+}
+
+.social-link ul li a {
+    color: #fff; 
+}
+.social-link ul li a:link i::before {
+    background: gray ;
+    padding: 1rem;
+    height: 1.6rem;
+    width: 1.6rem;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    display: inline-block;
+    transition: .5s;
+    
+}
+.social-link ul li a:hover i::before {
+    transform: rotate(360deg);
+    background:#d74680;
+    color:#fff;
+}
+
+                             /* ==================================
+                                           3.SKILL SECTION
+                                =================================== */
+
+.skill-section {
+    background: linear-gradient(rgba(230, 224, 224, 0.8),rgba(223, 145, 145, 0.8)), url(./image/sky5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.skill-section h2 {
+    font-weight: 700;
+    color: #333;
+}
+.skill-section h2::after {
+     background: #333;
+     width: 20rem;
+}
+.skill-section .little-discription {
+    color: #333;
+    text-align: center;
+}
+.skill-section .percentage {
+    text-align: center;
+}
+svg.radial-progress circle {
+    stroke-width: 5;
+}
+svg.radial-progress text {
+    font-size: 1.5rem;
+    fill: black;
+}
+
+svg .web-design circle {
+    fill: #E74C3C;
+}
+
+.radial-progress {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.box h3 {
+    color: #333;
+    text-transform: capitalize;
+}
+svg.web-design circle {
+    stroke: red;
+}
+svg.html-css circle {
+    stroke:blue;
+}
+svg.graphic-design circle {
+    stroke: green;
+}
+svg.ui-ux circle {
+    stroke:rgb(206, 22, 83);
+}
+
+                                /* ==================================
+                                           PORTFOLIO SECTION
+                                =================================== */
+.portfolio-section {
+    text-align: center;
+    background: #ffdd99;
+    
+   
+}
+
+                  
+.portfolio-section h2 {
+    color:#000;
+    
+}
+.portfolio-section h2::after {
+    background: red;
+    width: 20rem;
+}
+
+.little-discription {
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+.portfolio-filter button {
+    background: rgba(83, 66, 66, 0.8);
+    color: rgb(223, 213, 213);
+    padding: 1rem 2rem;
+    margin: 0 .5rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: .5rem;
+}
+.portfolio-filter button:hover {
+    cursor: pointer;
+    background: red;
+    box-shadow: inset .5rem .5rem .6rem rgba(65, 63, 63, 0.8);
+}
+
+.portfolio-section .col:nth-child(3) {
+    margin-left: 0;
+}
+.portfolio-image {
+    width: 85%;
+    height: 26rem;
+    font-weight: 400;
+}
+.btn-load-more {
+    background: #17c2a4;
+}
+.btn-load-more:hover {
+    background: transparent;
+    border: .1rem solid #17c2a4;
+    color: #000;
+}
+  
+                             /* ==================================
+                                           TESTIMONIAL SECTION
+                                =================================== */
+
+.testimonial-section {
+    background : linear-gradient(rgba(202, 11, 177, 0.8),rgba(214, 16, 115, 0.8)), url(./image/6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.testimonial-section h2 {
+    color: #fff;
+}
+.testimonial-section h2::after{
+    width: 37rem;
+}
+.testimonial-section .little-discription {
+    color: #fff;
+    text-align: center;
+}
+
+.testimonial-section .col:nth-child(3) {
+    margin-left:0;
+}
+.testimonial-section .col:nth-child(1),
+.testimonial-section .col:nth-child(2) {
+    margin-top: 6rem;
+}
+.testimonial-section .col:nth-child(3),
+.testimonial-section .col:nth-child(4) {
+    margin-top: 4rem;
+}
+.testimonial-section .client-photo {
+    height: 10rem;
+    float: left;
+}
+.testimonial-section .client-photo img {
+    height: 11rem;
+    border-radius: 50%;
+}
+.testimonial-section .client-review {
+    width: 35rem;
+    float: left;
+    margin-left: 5rem;
+    color: #fff;
+}
+.testimonial-section .client-review p {
+    margin-top: 0;
+    color: #fff;
+}
+.testimonial-section .client-review h3 {
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+}
+.testimonial-section .client-review .role {
+    color: #b6d313;
+}
+
+
+
+
+                             /* ==================================
+                                           CONTACT SECTION
+                                =================================== */
+
+.contact-section {
+    background: #3c5499;
+    text-align: center;
+}
+.contact-section h2 {
+    color: #fff;
+}
+.contact-section h2::after {
+    width: 18rem;
+}
+
+.contact-section .little-discription {
+    color: #fff;
+}
+.contact-section .col input[type="text"],
+.contact-section .col input[type="email"],
+.contact-section   textarea {
+    width: 100%;
+    background: #273a71;
+    padding: 1rem 0;
+    border: .1rem solid #273a71;
+    border-radius: .5rem;
+    color: #fff;
+
+}  
+.contact-section .col input[type="text"],
+.contact-section .col input[type="email"] {
+    margin: .5rem 0;
+   
+}
+.contact-section  form {
+    width: 70%;
+    margin: auto;
+    margin-top:5rem;
+} 
+.contact-section ::-webkit-input-placeholder {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+   
+} 
+.contact-section ::-moz-placeholder {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+   
+} 
+.contact-section :-ms-input-placeholder {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+   
+} 
+.contact-section ::-ms-input-placeholder {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+   
+} 
+.contact-section ::placeholder {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+   
+}
+.btn-submit {
+    color: #ffff;
+    background: #30bae7;
+    border: .1rem solid #30bae7;
+}
+.contact-section textarea {
+    height: 30rem;
+}
+.btn-submit:hover {
+    cursor: pointer;
+    background: transparent;
+}
+
+
+
+
+                              /* ==================================
+                                           FOOTER  SECTION
+                                =================================== */
+
+.footer-section {
+    background: #344b8e;
+    text-align: center;
+    border-top: .1rem solid rgb(73, 70, 70);
+}
+.footer-section ul li {
+    display: inline-block;
+    margin: 5rem 0;
+}
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-size: 1.8rem;
+
+}
+.footer-section ul li:hover a {
+    color: #4971e9;
+}
